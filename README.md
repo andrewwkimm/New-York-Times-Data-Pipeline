@@ -1,37 +1,23 @@
-# Table of Contents
-1. [Introduction](README.md#introduction)
-2. [Architecture Diagram](README.md#Architecture_Diagram)
-3. [Prerequisites](README.md#prerequisites)
-4. [Contact](README.md#contact)
-
-# Introduction
-**New York Times Dashboard**
-
-I pass by the New York Public Library (NYPL) every work day by Bryant Park and always wondered in the back of my head how vast their collection of books is—I plan on diving deeper into just that. Using NYPL's publically available API, I will build a pipeline that extracts the data from it, load it into a database (BigQuery), transform it via dbt, then finally visualize it through Tableau. Tentatively, the visualization will answer how the growth of the total available books is over time as well as deeper granularities into which genre is the most popular.
+# New York Times ETL Pipeline
+**An EtLT pipeline that uses the API from New York Times to ingest data of the articles published into a Google Storage bucket to feed into a BigQuery database, with the data modeling done through dbt. The pipeline is then run daily through Airflow to ultimately update two dashboards I wanted to test (Streamlit and Tableau).
 
 # Architecture Diagram
 
-![pipeline](image/)
+![pipeline](static/images/pipeline.png)
 
-1. Pull the data from the API using Python, then transforming it into tabular form
-2. Connect to BigQuery and load the data into it
-3. Create the data models in dbt
-4. Visualize the data using Tableau
-5. Schedule this process to repeat through Airflow
+1. Pull the data from the API using Python, then transform it into tabular form
+2. Connect to Google Storage bucket and load the data into it
+3. Check for data integrity issues using pytest
+4. Create the data models in dbt
+5. Visualize the data using Streamlit
+6. Schedule this process to repeat through Airflow
 
 # Prerequisites
 
-**Languages**
-* Python 3.8
-* pandas
-
-**Technologies**
-* Airflow
-* dbt
-* Tableau
-
-**Database**
-* BigQuery
+* Python 3.9
+* Docker 20.10.9
+* Docker-compose 1.29.2
+* Git
 
 # Contact
 
