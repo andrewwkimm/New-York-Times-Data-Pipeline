@@ -1,0 +1,4 @@
+*.vscode/
+config.py
+google_cloud_key.json
+__pycache__/
