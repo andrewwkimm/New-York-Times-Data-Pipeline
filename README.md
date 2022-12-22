@@ -1,5 +1,5 @@
 # New York Times ETL Pipeline
-**An EtLT pipeline that uses the API from New York Times to ingest data of the articles published into a Google Storage bucket to feed into a BigQuery database, with the data modeling done through dbt. The pipeline is then run daily through Airflow to ultimately update two dashboards I wanted to test (Streamlit and Tableau).**
+An EtLT pipeline that uses the API from New York Times to ingest data of the articles published into a Google Storage bucket to feed into a BigQuery database, with the data modeling done through dbt. The pipeline is then run daily through Airflow to ultimately update two dashboards I wanted to test (Streamlit and Tableau).
 
 # Architecture Diagram
 
