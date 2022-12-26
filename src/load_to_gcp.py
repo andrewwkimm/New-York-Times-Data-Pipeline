@@ -41,8 +41,11 @@ def update_upload_file():
     df_final.to_csv(config.file_path, index = False)
     return 0
 
-if __name__ == "__main__":
+def main():
     download_from_bucket('nyt_data', config.file_path_yesterday, 'new-york-times-bucket')
     update_upload_file()
     upload_to_bucket('nyt_data', config.file_path, 'new-york-times-bucket')
+
+if __name__ == "__main__":
+    main()
 

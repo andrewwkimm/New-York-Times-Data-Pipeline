@@ -68,7 +68,10 @@ def convert_to_dataframe(data: dict):
     df['date'] = df.apply(lambda x: x['date'][:-14], axis = 1)
     return df
 
-if __name__ == "__main__":
+def main():
     data = extract_data_from_api(configure_url())
     df = convert_to_dataframe(data)
     df.to_csv(config.file_path_today, index = False)
+
+if __name__ == "__main__":
+    main()   
