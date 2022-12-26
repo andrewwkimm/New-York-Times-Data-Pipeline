@@ -19,7 +19,7 @@ def extract_data_from_api(url: str) -> dict:
     articles = r.json()['response']['docs']
     return articles
 
-def convert_to_dataframe(data: dict):
+def convert_to_dataframe(data: dict): #-> dataframe
     # Create empty list for the desired columns
     pub_date = []
     headline = []
