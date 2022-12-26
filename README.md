@@ -3,7 +3,7 @@ An EtLT pipeline that uses the API from New York Times to ingest data of the art
 
 # Architecture Diagram
 
-![pipeline](static/images/pipeline.png)
+![pipeline](static/pipeline.png)
 
 1. Pull the data from the API using Python, then transform it into tabular form
 2. Connect to Google Storage bucket and load the data into it
