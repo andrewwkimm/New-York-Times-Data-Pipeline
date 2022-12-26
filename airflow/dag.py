@@ -1,4 +1,3 @@
-
 import os
 import sys
 
@@ -11,8 +10,6 @@ from datetime import datetime, timedelta
 import extract_from_api
 import load_to_gcp
 import config
-
-# print(config.directory)
 
 # os.chdir(src.config.directory)
 
